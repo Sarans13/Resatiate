@@ -1,0 +1,16 @@
+{
+  "name": "food-rangers",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "watch": "sass public/css/style.scss public/css/style.css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.59.3",
+    "vite": "^4.2.0"
+  }
+}
