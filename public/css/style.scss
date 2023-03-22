@@ -1,8 +1,8 @@
 .main
 {
 	position: relative;
-	min-height: 100svh;
 	min-height: 100vh;
+	min-height: 100svh;
 	display: grid;
 	place-items: center;
 	grid-template-rows: 6rem 3fr 1fr;
@@ -72,7 +72,8 @@
 .subtitle
 {
 	font-size: 3.5rem;
-	// max-width: min(60ch, 70%);
+	font-size: clamp(2rem, 5vw, 3.5rem);
+	max-width: clamp(90%, 4vw, 100%);
 	font-weight: 300;
 	line-height: 2ch;
 	text-align: center;
@@ -135,6 +136,7 @@
 {
 	border-radius: var(--border-radius-pill);
 }
+
 .join-us-btn
 {
 	border: none;
