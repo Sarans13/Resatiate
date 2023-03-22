@@ -1,15 +1,17 @@
 {
-  "name": "food-rangers",
+  "name": "resatiate",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "watch": "sass public/css/style.scss public/css/style.css --watch"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "sass": "^1.59.3",
     "vite": "^4.2.0"
   }
