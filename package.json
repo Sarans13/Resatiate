@@ -8,7 +8,7 @@
     "build": "vite build",
     "deploy": "gh-pages -d dist",
     "preview": "vite preview",
-    "watch": "sass public/css/style.scss public/css/style.css --watch"
+    "watch": "sass --watch public/css/:public/css/"
   },
   "devDependencies": {
     "gh-pages": "^5.0.0",

@@ -114,8 +114,11 @@ a
 button
 {
 	border: none;
+	cursor: pointer;
 }
-
+input{
+	color: revert;
+}
 ::selection
 {
 	background: var(--hover-green-two);

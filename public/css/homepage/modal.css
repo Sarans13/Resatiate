@@ -47,15 +47,20 @@ dialog.modal
 .modal__button
 {
 	border-radius: var(--border-radius-pill);
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid var(--primary-green);
+	background-color: var(--primary-green);
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
-	padding: 12px 45px;
+	padding: 1em 3em;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	transition: transform 80ms ease-in;
+	transition: background-color var(--transition-time) var(--transition-curve), padding var(--transition-time) var(--transition-curve) ;
+}
+.modal__button:hover
+{
+	background-color: var(--hover-green);
+	padding: 1em 4em;
 }
 
 .modal__button:active
@@ -72,6 +77,10 @@ dialog.modal
 {
 	background-color: transparent;
 	border-color: #FFFFFF;
+}
+.modal__button.modal__ghost-button:hover
+{
+	background-color: #FFFFFF44;
 }
 
 .modal__form-container--form
@@ -102,7 +111,6 @@ dialog.modal
 	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
 		0 10px 10px rgba(0, 0, 0, 0.22);
 	position: relative;
-	overflow: hidden;
 	width: 768px;
 	max-width: 100%;
 	min-height: 480px;
@@ -182,12 +190,12 @@ dialog.modal
 
 .modal__overlay
 {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: var(--primary-green);
+	background: -webkit-linear-gradient(to right, var(--primary-green), var(--hover-green));
+	background: linear-gradient(to right, var(--primary-green), var(--hover-green));
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: 0 0;
+	background-position: center center;
 	color: #FFFFFF;
 	position: relative;
 	left: -100%;
