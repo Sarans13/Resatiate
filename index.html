@@ -8,10 +8,10 @@
 	<title>Resatiate</title>
 	<link rel="stylesheet" href="/assets/fonts/stylesheet.css">
 	<link rel="stylesheet" href="/css/reset.css">
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/index_cards.css">
-	<link rel="stylesheet" href="/css/test.css">
-	<script type="module" src="/js/main.js" defer></script>
+	<link rel="stylesheet" href="/css/homepage/style.css">
+	<link rel="stylesheet" href="/css/homepage/index_cards.css">
+	<link rel="stylesheet" href="/css/homepage/modal.css">
+	<script type="module" src="/js/homepage.js" defer></script>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
 							<li class="pricing-features-item">Help poor people</li>
 							<li class="pricing-features-item">Reduce wastage of your food</li>
 						</ul>
-						<button class="pricing-button">Login</button>
+						<button class="pricing-button" data-js="loginButton">Login</button>
 						<span class="login-as">as Restaurant</span>
 					</div>
 
@@ -53,7 +53,7 @@
 							<li class="pricing-features-item">Best out of waste</li>
 							<li class="pricing-features-item">Used the oil to your advantage</li>
 						</ul>
-						<button class="pricing-button">Login</button>
+						<button class="pricing-button" data-js="loginButton">Login</button>
 						<span class="login-as">as Industry</span>
 					</div>
 
@@ -64,7 +64,7 @@
 							<li class="pricing-features-item">Helping Hand</li>
 							<li class="pricing-features-item">Dedicated towards wellbeing</li>
 						</ul>
-						<button class="pricing-button">Login</button>
+						<button class="pricing-button" data-js="loginButton">Login</button>
 						<span class="login-as">as NGO</span>
 					</div>
 
@@ -73,6 +73,59 @@
 		</div>
 	</section>
 
+	<dialog class="modal" id="modal">
+		<div class="modal__container" id="container">
+			<div class="modal__form-container modal__form-container--sign-up">
+				<form class="modal__form-container--form" method="dialog" action="#">
+					<h1 class="modal__title">Create Account</h1>
+					<div class="modal__social-container">
+						<a href="#" class="modal__social"><img
+								src="https://img.icons8.com/fluency/48/null/facebook-new.png" alt=""></a>
+						<a href="#" class="modal__social"><img src="/assets/images/insta-logo.png" alt=""></a>
+						<a href="#" class="modal__social"><img
+								src="https://img.icons8.com/fluency/48/null/google-logo.png" alt=""></a>
+					</div>
+					<span class="modal__text">or use your email for registration</span>
+					<input type="text" class="modal__input" placeholder="Name" />
+					<input type="email" class="modal__input" placeholder="Email" />
+					<input type="password" class="modal__input" placeholder="Password" />
+					<button class="modal__button" data-js="signUpButton" type="submit">Sign Up</button>
+				</form>
+			</div>
+			<div class="modal__form-container modal__form-container--sign-in">
+				<form class="modal__form-container--form" method="dialog" action="#">
+					<h1 class="modal__title">Sign in</h1>
+					<div class="modal__social-container">
+						<a href="#" class="modal__social"><img
+								src="https://img.icons8.com/fluency/48/null/facebook-new.png" alt=""></a>
+						<a href="#" class="modal__social"><img src="/assets/images/insta-logo.png" alt=""></a>
+						<a href="#" class="modal__social"><img
+								src="https://img.icons8.com/fluency/48/null/google-logo.png" alt=""></a>
+					</div>
+					<span class="modal__text">or use your account</span>
+					<input type="email" class="modal__input" placeholder="Email" />
+					<input type="password" class="modal__input" placeholder="Password" />
+					<a href="#" class="modal__link">Forgot your password?</a>
+					<button class="modal__button" data-js="signInButton" type="submit">Sign In</button>
+				</form>
+			</div>
+			<div class="modal__overlay-container">
+				<div class="modal__overlay">
+					<div class="modal__overlay-panel modal__overlay-panel--left">
+						<h1 class="modal__overlay-title">Welcome Back!</h1>
+						<p class="modal__overlay-text">To keep connected with us please login with your personal info
+						</p>
+						<button class="modal__button modal__ghost-button" id="signIn">Sign In</button>
+					</div>
+					<div class="modal__overlay-panel modal__overlay-panel--right">
+						<h1 class="modal__overlay-title">Hello, Friend!</h1>
+						<p class="modal__overlay-text">Enter your personal details and start journey with us</p>
+						<button class="modal__button modal__ghost-button" id="signUp">Sign Up</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</dialog>
 </body>
 
 </html>
