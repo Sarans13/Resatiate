@@ -99,9 +99,14 @@ dialog.modal
 {
 	background-color: #eee;
 	border: none;
+	border-radius: 8px;
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
+}
+.modal__input:is(:focus,:focus-visible,:focus-within)
+{
+	outline: 2px solid var(--hover-green);
 }
 
 .modal__container
