@@ -1,5 +1,14 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig({
-  base: '',
-})
+	base: "",
+	build: {
+		rollupOptions: {
+			input: {
+				main: resolve(__dirname, "index.html"),
+				restaurant: resolve(__dirname, "restaurant/index.html"),
+			},
+		},
+	},
+});
