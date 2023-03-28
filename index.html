@@ -12,6 +12,7 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>Resatiate</title>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<link
 			rel="stylesheet"
 			href="/assets/fonts/stylesheet.css"
@@ -72,7 +73,7 @@
 			id="login-section"
 		>
 			<div class="background">
-				<div class="container">
+				<div class="container" data-aos="zoom-in-up" data-aos-offset="500">
 					<div class="panel pricing-table">
 						<div class="pricing-plan">
 							<img
@@ -274,7 +275,7 @@
 						</button>
 					</form>
 				</div>
-				<div class="modal__overlay-container">
+				<div class="modal__overlay-container" data-aos="zoom-in-up" data-aos-offset="300">
 					<div class="modal__overlay">
 						<div
 							class="modal__overlay-panel modal__overlay-panel--left"
@@ -382,7 +383,10 @@
 				</div>
 			</div>
 		</footer>
-
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
 		<script
 			src="https://kit.fontawesome.com/f334ead1fc.js"
 			crossorigin="anonymous"
