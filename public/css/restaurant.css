@@ -1,9 +1,15 @@
 html
 {
   font-size: 70%;
+  font-weight: 600;
   overflow-x: hidden;
   scroll-padding-top: 20rem;
   scroll-behavior: smooth;
+}
+
+body
+{
+  margin-inline: 6em;
 }
 
 /* landing page starts */
@@ -42,7 +48,7 @@ html
 
 .tagline-restaurant-website span
 {
-  font-weight: bolder;
+  font-weight: 600;
   color: var(--pink-color);
 }
 
@@ -89,7 +95,7 @@ html
 {
   color: var(--pink-color);
   font-size: 5rem;
-  font-weight: bolder;
+  font-weight: 600;
   text-align: right;
   margin-top: -2rem;
 }
@@ -98,7 +104,7 @@ html
 {
   font-size: 1.5rem;
   text-align: justify;
-  font-weight: bolder;
+  font-weight: 600;
   color: rgba(0, 0, 0, 0.9)
 }
 
@@ -162,7 +168,7 @@ html
 {
   font-size: 5rem;
   color: var(--pink-color);
-  font-weight: bolder;
+  font-weight: 600;
   line-height: 0;
   margin-top: 7rem;
   margin-bottom: 5rem;
@@ -358,7 +364,7 @@ label
 .accordion .accordion-content p
 {
   font-size: 1rem;
-  font-weight: bolder;
+  font-weight: 600;
   text-align: justify;
   margin: 2em 0;
 }
