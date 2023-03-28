@@ -10,7 +10,7 @@
 	--hover-green: hsl(157, 43%, 40%);
 	--hover-green-two: hsla(157, 43%, 40%, 25%);
 	--orange-color: #de8b43;
-    --pink-color: rgb(145, 65, 98);
+    --pink-color: hsl(335, 38%, 41%);
 	--white: #fff;
 	--black: #000;
 }
@@ -111,6 +111,11 @@ a
 {
 	text-decoration: none;
 	color: currentColor;
+}
+
+a:focus
+{
+	outline: unset !important;
 }
 
 button
