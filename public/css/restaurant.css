@@ -7,17 +7,17 @@ html
   scroll-behavior: smooth;
 }
 
-body
+/* body
 {
   margin-inline: 6em;
-}
+} */
 
 /* landing page starts */
 .restaurant-landing-page
 {
-  background: url("/assets/images/background.webp");
+  background: url("/assets/images/background.jpg");
   background-size: cover;
-  height: 63rem;
+  min-height: 100vh;
   width: 100%;
   background-position: center center;
   padding-top: 1rem;
@@ -74,6 +74,7 @@ body
 {
   margin: 7.5rem 2rem 0 2rem;
   display: flex;
+  gap: 2em;
   justify-content: space-evenly;
 }
 
@@ -104,7 +105,7 @@ body
 {
   font-size: 1.5rem;
   text-align: justify;
-  font-weight: 600;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.9)
 }
 
@@ -215,7 +216,11 @@ body
   display: inline-block;
   border: 0;
   outline: 0;
-  background: var(--pink-color);
+  background-color: var(--pink-color);
+}
+.box-form .right button:hover
+{
+  background-color: hsl(335, 38%, 35%);
 }
 
 label
@@ -223,6 +228,11 @@ label
   display: block;
   position: relative;
   margin-left: 5rem;
+  color: hsl(0, 0%, 0%, 0.75);
+}
+label > a
+{
+  color: hsl(240, 73%, 58%);
 }
 
 .check-box-input
@@ -236,7 +246,7 @@ label
 
 .container
 {
-  margin: 0 auto;
+  margin-inline-start: 5em;
   margin-top: -7.5rem;
   padding: 4rem;
   width: 100%;
