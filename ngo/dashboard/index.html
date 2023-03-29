@@ -1,12 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>NGO Dashboard</title>
+	<title></title>
+	<link rel="stylesheet" href="/assets/fonts/stylesheet.css" />
+	<link rel="stylesheet" href="/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="/css/ngo_dashboard.css" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-	Hello
+	<div class="sidebar open">
+		<div class="logo-details">
+			<i class="bx bxl-c-plus-plus icon"></i>
+			<div class="logo_name">ReSatiate</div>
+			<!-- <i class="bx bx-menu" id="btn"></i> -->
+		</div>
+		<ul class="nav-list">
+			<li>
+				<a href="#">
+					<i class="bx bx-grid-alt"></i>
+					<span class="links_name">Dashboard</span>
+				</a>
+				<span class="tooltip">Dashboard</span>
+			</li>
+			<li>
+				<a href="#">
+					<i class="bx bx-user"></i>
+					<span class="links_name">Your Journey</span>
+				</a>
+				<span class="tooltip">Your Journey</span>
+			</li>
+			<li>
+				<a href="#">
+					<i class="bx bx-chat"></i>
+					<span class="links_name">Messages</span>
+				</a>
+				<span class="tooltip">Messages</span>
+			</li>
+			<li>
+				<a href="#">
+					<i class="bx bx-cog"></i>
+					<span class="links_name">Setting</span>
+				</a>
+				<span class="tooltip">Setting</span>
+			</li>
+			<li class="profile">
+				<div class="profile-details">
+					<!--<img src="profile.jpg" alt="profileImg">-->
+					<div class="name_job">
+						<div class="name">For The Poor</div>
+						<div class="job">NGO</div>
+					</div>
+				</div>
+				<i class="bx bx-log-out" id="log_out"></i>
+			</li>
+		</ul>
+	</div>
+
+	<div class="main">
+		<div class="container">
+			<div class="welcome">Welcome User</div>
+			<div class="stats-box">
+				<div class="stat1"></div>
+				<div class="stat2"></div>
+			</div>
+		</div>
+	</div>
+
 </body>
+
 </html>

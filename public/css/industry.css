@@ -2,6 +2,7 @@
 {
 	--orange-color: #de8b43;
 	--pink-color: #de8b43;
+	--primary-color: var(--orange-color);
 }
 
 
@@ -41,9 +42,25 @@ html
 	font-weight: 700;
 }
 
+.logo
+{
+	text-align: left;
+	font-size: 3rem;
+	font-weight: bold;
+	padding-left: 5rem;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	letter-spacing: 0.05em;
+	padding-block: 1em;
+}
+
+.logo span
+{
+	color: var(--primary-color);
+}
+
 .tagline-restaurant-website
 {
-	padding-top: 30rem;
+	padding-top: 22rem;
 	padding-left: 5rem;
 	color: rgb(250, 235, 215);
 	font-size: 5rem;
@@ -61,10 +78,10 @@ html
 	margin-top: 3rem;
 	background: none;
 	color: white;
-	width: 10rem;
-	height: 5rem;
-	border: 0.25rem solid var(--pink-color);
-	border-radius: 2rem;
+	padding: 1em 2em;
+	font-size: 1.5rem;
+	border: 2px solid var(--pink-color);
+	border-radius: var(--border-radius-pill);
 	transition: background-color var(--transition-time) var(--transition-curve);
 }
 
@@ -312,6 +329,7 @@ html
 .accordion button .accordion-title
 {
 	padding: 1em 1.5em 1em 0;
+	font-size: 1.5rem;
 }
 
 .accordion button .icon
@@ -379,10 +397,10 @@ html
 
 .accordion .accordion-content p
 {
-	font-size: 1rem;
+	font-size: 1.5rem;
 	font-weight: bolder;
 	text-align: justify;
-	margin: 2em 0;
+	margin-block-end: 2em;
 }
 
 .faq-container-right
@@ -443,8 +461,12 @@ html
 	font-size: 14px;
 	line-height: 24px;
 	margin-bottom: 0;
-	font-family: "Raleway", sans-serif;
 	color: #fff;
+}
+
+.social-links
+{
+	margin-block-start: 1em;
 }
 
 #footer .footer-top .social-links a
@@ -511,7 +533,8 @@ html
 	line-height: 1;
 }
 
-#footer .footer-top .footer-links ul a:hover
+#footer .footer-top .footer-links ul a:hover,
+a[href^="mailto"]:hover
 {
 	color: var(--pink-color);
 }

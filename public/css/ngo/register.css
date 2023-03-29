@@ -56,7 +56,7 @@
 
 .box-form .right h5
 {
-	font-size: 5rem;
+	font-size: 3rem;
 	color: var(--pink-color);
 	font-weight: 600;
 	line-height: 0;
@@ -82,7 +82,7 @@
 	margin-left: 2rem;
 	width: 80%;
 	padding: 10px;
-	font-size: 16px;
+	font-size: 1rem;
 	border: none;
 	outline: none;
 	border-bottom: 2px solid var(--pink-color);
@@ -98,7 +98,7 @@
 .box-form .right button
 {
 	color: #fff;
-	font-size: 16px;
+	font-size: 1rem;
 	margin-left: 5rem;
 	padding: 12px 35px;
 	border-radius: 30px;
@@ -108,9 +108,14 @@
 	background-color: var(--pink-color);
 }
 
+.text-checkbox {
+	font-size: 0.9rem;
+  }
+  
+
 .box-form .right button:hover
 {
-	background-color: hsl(335, 38%, 35%);
+	background-color: var(--primary-green);
 }
 
 label
