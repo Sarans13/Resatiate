@@ -9,7 +9,9 @@
 	--primary-green: hsl(157, 43%, 27%);
 	--hover-green: hsl(157, 43%, 40%);
 	--hover-green-two: hsla(157, 43%, 40%, 25%);
-	--orange-color: #de8b43;
+	--hover-green-three: hsla(157, 30%, 15%, 90%);
+	--green-color: hsl(157, 43%, 40%);
+	--orange-color: hsl(28, 70%, 57%);
     --pink-color: hsl(335, 38%, 41%);
 	--white: #fff;
 	--black: #000;

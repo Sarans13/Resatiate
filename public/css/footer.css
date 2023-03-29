@@ -3,7 +3,7 @@
     background: black;
     padding: 0 0 30px 0;
     color: #fff;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 #footer .footer-top
@@ -30,7 +30,7 @@
 
 #footer .footer-top .footer-info h3
 {
-    font-size: 28px;
+    font-size: 2rem;
     margin: 0 0 20px 0;
     padding: 2px 0 2px 0;
     line-height: 1;
@@ -40,7 +40,7 @@
 
 #footer .footer-top .footer-info p
 {
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 24px;
     margin-bottom: 0;
     color: #fff;
@@ -48,7 +48,7 @@
 
 #footer .footer-top .social-links a
 {
-    font-size: 18px;
+    font-size: 1.25rem;
     display: inline-block;
     background: #292929;
     color: #fff;
@@ -71,7 +71,7 @@
 
 #footer .footer-top h3
 {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     color: #fff;
     position: relative;
@@ -87,7 +87,7 @@
 {
     padding-right: 2px;
     color: var(--hover-green);
-    font-size: 18px;
+    font-size: 1.25rem;
     line-height: 1;
 }
 
@@ -164,7 +164,7 @@ a[href^="mailto"]:hover
     bottom: 0;
     border: 0;
     background: none;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 0 20px;
     background: var(--hover-green);
     color: #151515;
@@ -187,7 +187,7 @@ a[href^="mailto"]:hover
 {
     padding-top: 10px;
     text-align: center;
-    font-size: 13px;
+    font-size: 1.1rem;
     color: #fff;
 }
 
