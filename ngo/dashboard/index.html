@@ -8,15 +8,15 @@
 	<link rel="stylesheet" href="/css/ngo_dashboard.css" type="text/css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<script src="https://kit.fontawesome.com/4af0a895d1.js" crossorigin="anonymous" defer></script>
+
 </head>
 
 <body>
 	<div class="sidebar open">
-		<div class="logo-details">
-			<i class="bx bxl-c-plus-plus icon"></i>
-			<div class="logo_name">ReSatiate</div>
-			<!-- <i class="bx bx-menu" id="btn"></i> -->
-		</div>
+		<p class="logo"><span>Re</span>Satiate</p>
 		<ul class="nav-list">
 			<li>
 				<a href="#">
@@ -42,9 +42,9 @@
 			<li>
 				<a href="#">
 					<i class="bx bx-cog"></i>
-					<span class="links_name">Setting</span>
+					<span class="links_name">Settings</span>
 				</a>
-				<span class="tooltip">Setting</span>
+				<span class="tooltip">Settings</span>
 			</li>
 			<li class="profile">
 				<div class="profile-details">
@@ -59,14 +59,119 @@
 		</ul>
 	</div>
 
-	<div class="main">
-		<div class="container">
-			<div class="welcome">Welcome User</div>
-			<div class="stats-box">
-				<div class="stat1"></div>
-				<div class="stat2"></div>
+	<div id="main">
+		<div class="head">
+			<div class="col-div-6">
+				<span style="font-size: 30px; cursor: pointer;" class="nav"><span class="hamburger">&#9776;</span>
+					Dashboard</span>
+
+				<span style="font-size: 30px; cursor: pointer;" class="nav2"><span class="hamburger">&#9776;</span>
+					Dashboard</span>
+			</div>
+
+			<div class="col-div-6">
+				<div class="profile">
+					<img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+						class="pro-img" />
+					<p>XYZ ORG <span>INDUSTRY</span></p>
+				</div>
+				<div class="bell-notification" current-count="8">
+					<i class="fa-solid fa-bell fa-2xl"></i>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+
+		<div class="clearfix"></div>
+		<br />
+
+		<div class="col-div-3">
+			<div class="box">
+				<p class="box-text">900<br /><span>Restaurants</span></p>
+				<i class="fa-sharp fa-solid fa-utensils fa-2xl box_icon"></i>
+				<!-- <i class="fa-solid fa-utensils"></i> -->
+				<!-- <i class="fa fa-users box-icon"></i> -->
 			</div>
 		</div>
+		<div class="col-div-3">
+			<div class="box">
+				<p class="box-text">80<br /><span>Industries</span></p>
+				<i class="fa-solid fa-industry fa-2xl box_icon"></i>
+				<!-- <i class="fa fa-list box-icon"></i> -->
+			</div>
+		</div>
+		<div class="col-div-3">
+			<div class="box">
+				<p class="box-text">990L<br /><span>Oil</span></p>
+				<i class="fa-solid fa-oil-well fa-2xl box_icon"></i>
+				<!-- <i class="fa fa-shopping-bag box-icon"></i> -->
+			</div>
+		</div>
+		<!-- <div class="col-div-3">
+		<div class="box">
+			<p>78<br/><span>Tasks</span></p>
+			<i class="fa fa-tasks box-icon"></i>
+		</div>
+	</div> -->
+		<div class="clearfix"></div>
+		<br /><br />
+		<div class="col-div-8">
+			<div class="box-8">
+				<div class="content-box">
+					<p>Recent Orders</p>
+					<br />
+					<table>
+						<tr>
+							<th>Restaurents</th>
+							<th>Oil (in L)</th>
+							<!-- <th>Country</th> -->
+						</tr>
+						<tr>
+							<td>Mostly Grills</td>
+							<td>12L</td>
+							<!-- <td>Germany</td> -->
+						</tr>
+						<tr>
+							<td>Shamiana</td>
+							<td>20L</td>
+							<!-- <td>Mexico</td> -->
+						</tr>
+						<tr>
+							<td>Upre</td>
+							<td>25L</td>
+							<!-- <td>Austria</td> -->
+						</tr>
+						<tr>
+							<td>Richards Cafe</td>
+							<td>10L</td>
+							<!-- <td>UK</td> -->
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-div-4">
+			<div class="box-4">
+				<div class="content-box">
+					<p>Total Oil Recycled</p>
+
+					<div class="circle-wrap">
+						<div class="circle">
+							<div class="mask full">
+								<div class="fill"></div>
+							</div>
+							<div class="mask half">
+								<div class="fill"></div>
+							</div>
+							<div class="inside-circle">99%</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
 	</div>
 
 </body>

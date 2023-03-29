@@ -8,6 +8,7 @@ body
 	--text-color: hsl(0, 0%, 10%);
 	--accent-color-two: var(--orange-color);
 	--white: var(--orange-color);
+	--primary-color: var(--orange-color);
 	background-color: var(--background-color);
 	overflow-x: hidden;
 }
@@ -19,16 +20,17 @@ body
 
 .logo
 {
-	margin: 0px;
-	margin-left: 28px;
+	text-align: left;
+	font-size: 2rem;
 	font-weight: bold;
-	color: var(--overlay-color);
-	margin-bottom: 30px;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	letter-spacing: 0.05em;
+	padding-inline-start: 1em;
 }
 
 .logo span
 {
-	color: var(--accent-color-two);
+	color: var(--primary-color);
 }
 
 .sidenav
@@ -159,6 +161,7 @@ body
 {
 	color: white;
 }
+
 .box:hover>.box-text
 {
 	color: white;
@@ -243,6 +246,7 @@ body
 	color: var(--navbar-bg);
 	transition: background var(--transition-time) var(--transition-curve);
 }
+
 .box-4:hover
 {
 	background: hsl(28, 100%, 70%);
@@ -356,6 +360,7 @@ th
 	top: 10px;
 	transition: color var(--transition-time) var(--transition-curve);
 }
+
 .bell-notification:hover
 {
 	color: var(--white);

@@ -1,6 +1,9 @@
 html
 {
   --primary-color: var(--pink-color);
+  --hover-color: hsl(335, 38%, 31%);
+  --primary-green: var(--pink-color) !important;
+  --hover-green: hsl(335, 38%, 31%) !important;
   overflow-x: hidden;
   scroll-padding-top: 20rem;
   scroll-behavior: smooth;

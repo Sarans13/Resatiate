@@ -15,6 +15,7 @@
   --c-text-primary: var(--c-gray-100);
   --c-text-secondary: var(--c-gray-200);
   --c-text-tertiary: var(--c-gray-500);
+  --primary-color: var(--pink-color);
 }
 
 .app
@@ -173,10 +174,16 @@
 
 .logo
 {
-  display: flex;
-  align-items: center;
-  padding-top: 1rem;
-  border-bottom: 1px solid var(--c-gray-600);
+  text-align: left;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.logo span
+{
+  color: var(--primary-color);
 }
 
 @media (max-width: 1200px)

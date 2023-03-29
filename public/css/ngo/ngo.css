@@ -1,3 +1,8 @@
+html
+{
+	scroll-padding-top: 26em;
+	scroll-behavior: smooth;
+}
 body
 {
 	--primary-color: var(--green-color);
@@ -64,6 +69,7 @@ body::before
 	color: var(--primary-color);
 }
 
+
 #hero
 {
 	z-index: -1;
@@ -76,17 +82,33 @@ body::before
 {
 	padding: 0;
 	margin: 0;
-	height: 100vh;
+	height: 90vh;
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+.restaurant-login-button
+{
+	margin-top: 3rem;
+	background: none;
+	color: white;
+	padding: 1em 2em;
+	font-size: 1.5rem;
+	border: 2px solid var(--primary-color);
+	border-radius: var(--border-radius-pill);
+	transition: background-color var(--transition-time) var(--transition-curve);
+}
+
+.restaurant-login-button:hover
+{
+	background-color: var(--primary-color);
 }
 
 #hero>.container-box>.hero_text
 {
 	color: white;
-	padding-bottom: 25vh;
 	font-size: 3.5em;
 }
 
