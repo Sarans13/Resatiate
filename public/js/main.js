@@ -108,7 +108,7 @@ const allOrganisationList = ["restaurant", "industry", "ngo"];
 Array.from(loginButtons).forEach((loginButton, index) => {
 	loginButton.addEventListener("click", () => {
 		forms.forEach((form) => {
-			form.action = `/${allOrganisationList[index]}/`;
+			form.action = `${allOrganisationList[index]}/`;
 			form.onsubmit = () => {
 				onAuthStateChanged(auth, function (user) {
 					if (user) {
