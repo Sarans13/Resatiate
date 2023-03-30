@@ -8,7 +8,7 @@ body
 	--primary-color: var(--green-color);
 	width: 100%;
 	overflow-x: hidden;
-	background-image: url(/assets/images/fff.jpg);
+	background-image: url("../assets/images/fff.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;

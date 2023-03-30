@@ -34,7 +34,7 @@
 	color: #FFFFFF;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image: url("/assets/images/ngo_image.jpg");
+	background-image: url("../assets/images/ngo_image.jpg");
 	width: 50%;
 }
 
