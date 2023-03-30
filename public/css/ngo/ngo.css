@@ -56,7 +56,7 @@ body::before
 	align-items: center;
 }
 
-#navbar>.container>.logo
+.logo
 {
 	text-align: center;
 	font-size: 2rem;
@@ -64,7 +64,7 @@ body::before
 	font-family: 'Alegreya Sans SC', sans-serif;
 	letter-spacing: 0.05em;
 }
-#navbar>.container>.logo>span
+.logo span
 {
 	color: var(--primary-color);
 }
