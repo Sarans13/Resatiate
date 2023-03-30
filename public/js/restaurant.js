@@ -4,6 +4,8 @@ import {
 	collection,
 	getDocs,
 	addDoc,
+	query, 
+	where
 } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
 import {
 	getAuth,
@@ -60,3 +62,14 @@ addcustomerform.addEventListener("submit", (e) => {
 		email: email,
 	});
 });
+
+
+// to redirect into dashboard if registered
+const isRegistered = query(colRef, where("email", "==", email));
+if(isRegistered){
+	document.querySelector("#register-restaurant").style.display = "none";
+	const dashboardButton = document.querySelector("#restaurant-login-link");
+	dashboardButton.textContent = "GO TO DASHBOARD";
+	dashboardButton.href = "dashboard/";
+	document.querySelector(".accordion-container").style.margin = "0";
+}
