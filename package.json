@@ -14,5 +14,8 @@
     "gh-pages": "^5.0.0",
     "sass": "^1.59.3",
     "vite": "^4.2.0"
+  },
+  "dependencies": {
+    "firebase": "^9.18.0"
   }
 }

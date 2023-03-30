@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="/css/homepage/modal.css" />
 	<link rel="stylesheet" href="/css/footer.css" />
 	<script type="module" src="/js/homepage.js" defer></script>
+	<script type="module" src="/js/main.js" defer></script>
 </head>
 
 <body>
@@ -101,13 +102,13 @@
 						<a href="#" class="modal__social"><img
 								src="https://img.icons8.com/fluency/48/null/facebook-new.png" alt="" /></a>
 						<a href="#" class="modal__social"><img src="/assets/images/insta-logo.png" alt="" /></a>
-						<a href="#" class="modal__social"><img
+						<a href="#" class="modal__social" data-js="googleGmailLogin"><img
 								src="https://img.icons8.com/fluency/48/null/google-logo.png" alt="" /></a>
 					</div>
 					<span class="modal__text">or use your email for registration</span>
-					<input type="text" class="modal__input" placeholder="Name" />
-					<input type="email" class="modal__input" placeholder="Email" />
-					<input type="password" class="modal__input" placeholder="Password" />
+					<input type="text" class="modal__input" placeholder="Name" id="signup-name"/>
+					<input type="email" class="modal__input" placeholder="Email" id="signup-email"/>
+					<input type="password" class="modal__input" placeholder="Password" id="signup-password" />
 					<button class="modal__button" data-js="signUpButton" type="submit">
 						Sign Up
 					</button>
@@ -120,12 +121,12 @@
 						<a href="#" class="modal__social"><img
 								src="https://img.icons8.com/fluency/48/null/facebook-new.png" alt="" /></a>
 						<a href="#" class="modal__social"><img src="/assets/images/insta-logo.png" alt="" /></a>
-						<a href="#" class="modal__social"><img
+						<a href="#" class="modal__social" data-js="googleGmailLogin"><img
 								src="https://img.icons8.com/fluency/48/null/google-logo.png" alt="" /></a>
 					</div>
 					<span class="modal__text">or use your account</span>
-					<input type="email" class="modal__input" placeholder="Email" />
-					<input type="password" class="modal__input" placeholder="Password" />
+					<input type="email" class="modal__input" placeholder="Email" id="login-email"/>
+					<input type="password" class="modal__input" placeholder="Password" id="login-password"/>
 					<a href="#" class="modal__link">Forgot your password?</a>
 					<button class="modal__button" data-js="signInButton" type="submit">
 						Login
@@ -181,7 +182,7 @@
 				<div class="col-lg-2 mobile footer-links">
 					<h3>Useful Links</h3>
 					<ul>
-						<li><a href="index.html">Home</a></li>
+						<li><a href="#">Home</a></li>
 						<li><a href="restaurant/">Restaurant</a></li>
 						<li><a href="industry/">Industry</a></li>
 						<li><a href="ngo/">NGO </a></li>

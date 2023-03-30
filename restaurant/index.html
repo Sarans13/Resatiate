@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/null/potted-plant.png" />
   <link rel="stylesheet" href="/assets/fonts/stylesheet.css" />
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/restaurant.css" />
@@ -13,11 +14,12 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <title>Restaurant</title>
+  <script type="module" src="/js/restaurant.js" defer></script>
 </head>
 
 <body>
   <div class="restaurant-landing-page">
-    <div class="logo"><a href="/"><span>Re</span>Satiate</a></div>
+    <div class="logo"><a href="../"><span>Re</span>Satiate</a></div>
     <div class="tagline-restaurant-website">
       Still Counting on food bins,<br />
       Then you are at the <span>RIGHT SPOT</span>
@@ -65,34 +67,36 @@
     </div>
     <div class="right">
       <h5>REGISTER</h5>
-      <div class="inputs">
-        <div class="input-1">
-          <input type="text" placeholder="Name">
-          <input type="number" placeholder="Aadhaar Number">
+      <form action="" id="register-form">
+        <div class="inputs">
+          <div class="input-1">
+            <input type="text" placeholder="Name" name="Name">
+            <input type="number" placeholder="Aadhaar Number" name="AadhaarNumber">
+          </div>
+          <div class="input-1">
+            <input type="number" placeholder="License Number(optional)" name="LicenseNumber">
+            <input type="text" placeholder="Country" name="Country">
+          </div>
+          <div class="input-1">
+            <input type="text" placeholder="City" name="City">
+            <input type="text" placeholder="Address" name="Address">
+          </div>
         </div>
-        <div class="input-1">
-          <input type="number" placeholder="License Number(optional)">
-          <input type="text" placeholder="Country">
+        <br><br>
+        <div class="remember-me--forget-password">
+          <label>
+            <input type="checkbox" name="item" class="check-box-input" checked />
+            <span class="text-checkbox">I hereby agree to all the terms and conditions that any fault in delivery to both
+              industry and the NGO that is food or oil will subject to open complaint against the entire organization
+              (restaurant/catering) service openly in the ONLINE LEGAL INDIA or FSSAI portal which may subject to license
+              cancellation.</span>
+            <br>
+            <a href="#">Already registered? Go to login page.</a>
+          </label>
         </div>
-        <div class="input-1">
-          <input type="text" placeholder="City">
-          <input type="text" placeholder="Address">
-        </div>
-      </div>
-      <br><br>
-      <div class="remember-me--forget-password">
-        <label>
-          <input type="checkbox" name="item" class="check-box-input" checked />
-          <span class="text-checkbox">I hereby agree to all the terms and conditions that any fault in delivery to both
-            industry and the NGO that is food or oil will subject to open complaint against the entire organization
-            (restaurant/catering) service openly in the ONLINE LEGAL INDIA or FSSAI portal which may subject to license
-            cancellation.</span>
-          <br>
-          <a href="#">Already registered? Go to login page.</a>
-        </label>
-      </div>
-      <br>
-      <button>Register</button>
+        <br>
+        <button type="submit">Register</button>
+      </form>
     </div>
   </div>
   <div class="accordion-container">
@@ -168,10 +172,10 @@
         <div class="col-lg-2 mobile footer-links">
           <h3>Useful Links</h3>
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li><a href="#">Restaurant</a></li>
-            <li><a href="#">Industry</a></li>
-            <li><a href="#">NGO </a></li>
+            <li><a href="../industry/">Industry</a></li>
+            <li><a href="../ngo/">NGO </a></li>
           </ul>
         </div>
         <div class="col-lg-4 mobile footer-newsletter">
