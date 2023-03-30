@@ -36,7 +36,9 @@ onAuthStateChanged(auth, (user) => {
 	if (user) {
 		// User is signed in, see docs for a list of available properties
 		email = user.email;
+		console.log(email);
 	} else {
+		console.log("User not found error");
 		// User is signed out
 		// alert("Please Login/Sign Up first!");
 		// window.location.href = "/";
@@ -47,6 +49,7 @@ onAuthStateChanged(auth, (user) => {
 const addcustomerform = document.querySelector("#register-form");
 addcustomerform.addEventListener("submit", (e) => {
 	e.preventDefault();
+	console.log(email);
 	addDoc(colRef, {
 		Name: addcustomerform.Name.value,
 		AadhaarNumber: addcustomerform.AadhaarNumber.value,

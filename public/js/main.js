@@ -27,11 +27,14 @@ const auth = getAuth(firebaseApp);
 const googleProvider = new GoogleAuthProvider();
 
 // Sign Up ---------------------------------------------------
-const signUpButton = document.querySelector(`[data-js="signUpButton"]`);
-signUpButton.addEventListener("click", () => {
+// const signUpButton = document.querySelector(`[data-js="signUpButton"]`);
+// signUpButton.addEventListener("click", async () => {
+// 	// await signUpWithEmail();
+// });
+
+async function signUpWithEmail() {
 	let email = document.getElementById("signup-email").value;
 	let password = document.getElementById("signup-password").value;
-
 	createUserWithEmailAndPassword(auth, email, password)
 		.then((userCredential) => {
 			// Signed in
@@ -45,11 +48,15 @@ signUpButton.addEventListener("click", () => {
 			console.log(errorCode);
 			console.log(errorMessage);
 		});
-});
+}
 
 // Sign In ---------------------------------------------------
-const signInButton = document.querySelector(`[data-js="signInButton"]`);
-signInButton.addEventListener("click", () => {
+// const signInButton = document.querySelector(`[data-js="signInButton"]`);
+// signInButton.addEventListener("click", async () => {
+// 	// await loginWithEmail();
+// });
+
+async function loginWithEmail() {
 	let email = document.getElementById("login-email").value;
 	let password = document.getElementById("login-password").value;
 	signInWithEmailAndPassword(auth, email, password)
@@ -65,7 +72,7 @@ signInButton.addEventListener("click", () => {
 			console.log(errorCode);
 			console.log(errorMessage);
 		});
-});
+}
 
 // Login with Gmail ---------------------------------------------------
 const googleGmailLogins = document.querySelectorAll(
@@ -109,13 +116,31 @@ Array.from(loginButtons).forEach((loginButton, index) => {
 	loginButton.addEventListener("click", () => {
 		forms.forEach((form) => {
 			form.action = `${allOrganisationList[index]}/`;
-			form.onsubmit = () => {
-				onAuthStateChanged(auth, function (user) {
+			form.onsubmit = async () => {
+				console.log("inside onsubmit");
+				signOut(auth)
+					.then(() => {
+						console.log("Sign-out successful.");
+					})
+					.catch((error) => {
+						console.log("sorry bro, An error happened.", error);
+					});
+				if (form.id == "signInForm") {
+					console.log("Signed In");
+					await loginWithEmail();
+				} else if (form.id == "signUpForm") {
+					console.log("Signed Up");
+					await signUpWithEmail();
+				}
+				await onAuthStateChanged(auth, function (user) {
 					if (user) {
 						window.location.href = form.action;
+						console.log("User Email: ", user.email);
 					}
 				});
 			};
 		});
 	});
 });
+
+// --------------------------------------
