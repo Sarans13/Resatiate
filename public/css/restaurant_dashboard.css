@@ -17,32 +17,31 @@
   --c-text-tertiary: var(--c-gray-500);
   --primary-color: var(--pink-color);
 }
-a:hover, a:focus
-{
-  color: unset !important;
-  text-decoration: none !important;
-}
+
+
+
 .logo
 {
-	text-align: left;
-	font-size: 2rem;
-	font-weight: bold;
-	font-family: 'Alegreya Sans SC', sans-serif;
-	letter-spacing: 0.05em;
-	padding-inline-start: 0.5em;
-	padding-block-start: 0.5em;
-  
+  text-align: left;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  letter-spacing: 0.05em;
+  padding-inline-start: 0.5em;
+  padding-block-start: 0.5em;
+
 }
 
-.logo:hover
+.logo a:hover, .logo a:focus
 {
-	opacity: 0.8;
-  text-decoration: none;
+  opacity: 0.8;
+  color: unset !important;
+  text-decoration: none !important;
 }
 
 .logo span
 {
-	color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 
@@ -238,10 +237,10 @@ a:hover, a:focus
   line-height: 1.25;
   margin-left: 0.75rem;
   font-size: 4rem;
-	font-weight: bold;
-	font-family: 'Alegreya Sans SC', sans-serif;
-	letter-spacing: 0.05em;
-	cursor: pointer;
+  font-weight: bold;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  letter-spacing: 0.05em;
+  cursor: pointer;
   color: var(--black);
 }
 
@@ -699,6 +698,7 @@ a:hover, a:focus
   align-items: center;
   transition: transform var(--transition-time) var(--transition-curve);
 }
+
 .payment:hover
 {
   transform: scale(0.95);
@@ -810,6 +810,7 @@ a:hover, a:focus
   align-items: center;
   justify-content: center;
 }
+
 .transfer-logo:hover
 {
   background-color: var(--c-gray-400);
