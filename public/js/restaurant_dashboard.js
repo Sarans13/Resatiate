@@ -4,7 +4,8 @@ import {
 	collection,
 	getDocs,
 	addDoc,
-} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
+    query, 
+	where} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
 import {
 	getAuth,
 	onAuthStateChanged,
@@ -32,13 +33,38 @@ getDocs(colRef).then((snapshot) => {
 const auth = getAuth(firebaseApp);
 let email = "test@mail.com";
 
-onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, async (user) => {
 	if (user) {
 		// User is signed in, see docs for a list of available properties
 		email = user.email;
+		// to redirect into dashboard if registered
+		const queryEmail = query(colRef, where("email", "==", email));
+		console.log(email);
+		const querySnapshot = await getDocs(queryEmail);
+		querySnapshot.forEach((doc) => {
+			console.log(doc);
+			// doc.data() is never undefined for query doc snapshots
+			console.log(doc.id, " => ", doc.data());
+			const {
+				Name, Restaurantname
+			} = doc.data();
+			console.log(Name);
+			console.log(Restaurantname);
+			changingContent(Name,Restaurantname);
+		  });
+		
 	} else {
+		console.log("User not found error");
+		alert("Please Login to Continue");
 		// User is signed out
-		// alert("Please Login/Sign Up first!");
 		// window.location.href = "/";
 	}
 });
+
+// function to be executed-------------------------------------------------
+function changingContent(Name,Restaurantname){
+	const username = document.querySelector("#Sarans");
+	username.textContent = Name;
+	const Restname = document.querySelector("#Kalinga");
+	Restname.textContent = Restaurantname;
+}
