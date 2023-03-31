@@ -15,6 +15,7 @@
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<title>Restaurant</title>
 	<script type="module" src="/js/restaurant.js" defer></script>
+	<script type="module" src="/js/utils.js" defer></script>
 </head>
 
 <body>
@@ -77,7 +78,8 @@
 							inputmode="numeric" pattern="[0-9]{0,12}" maxlength="12" minlength="12">
 					</div>
 					<div class="input-1">
-						<input type="number" placeholder="License Number(optional)" name="LicenseNumber">
+						<input type="text" placeholder="License Number(optional)" name="LicenseNumber"
+							inputmode="numeric" pattern="[0-9]{0,}">
 						<input required type="text" placeholder="Country" name="Country">
 					</div>
 					<div class="input-1">
@@ -92,7 +94,7 @@
 				<br><br>
 				<div class="remember-me--forget-password">
 					<label>
-						<input type="checkbox" name="item" class="check-box-input" checked required/>
+						<input type="checkbox" name="item" class="check-box-input" checked required />
 						<span class="text-checkbox">I hereby agree to all the terms and conditions that any fault in
 							delivery to
 							both
@@ -206,7 +208,7 @@
 					<p>
 						Stay in the know with exclusive updates and content by subscribing to our newsletter today!
 					</p>
-					<form action="" method="post">
+					<form action="" method="">
 						<input type="email" name="email" placeholder="Enter your email here" /><button class="form-btn">
 							Subscribe
 						</button>

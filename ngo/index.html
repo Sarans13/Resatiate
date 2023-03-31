@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="/css/footer.css" />
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<script type="module" src="/js/ngo.js" defer></script>
-
+	<script type="module" src="/js/utils.js" defer></script>
 	<title>NGO</title>
 </head>
 
@@ -71,10 +71,11 @@
 					<div class="input-1">
 						<input required type="text" placeholder="Name" name="Name">
 						<input required type="text" placeholder="Aadhaar Number" name="AadhaarNumber" type="text"
-							inputmode="numeric" pattern="[0-9]{0,12}">
+							inputmode="numeric" pattern="[0-9]{0,12}" maxlength="12" minlength="12">
 					</div>
 					<div class="input-1">
-						<input type="number" placeholder="License Number(optional)" name="LicenseNumber">
+						<input type="text" placeholder="License Number(optional)" name="LicenseNumber"
+							inputmode="numeric" pattern="[0-9]{0,}">
 						<input required type="text" placeholder=" Country" name="Country">
 					</div>
 					<div class="input-1">
@@ -185,7 +186,7 @@
 						Stay in the know with exclusive updates and content by subscribing
 						to our newsletter today!
 					</p>
-					<form action="" method="post">
+					<form action="" method="">
 						<input type="email" name="email" placeholder="Enter your email here" />
 						<button class="form-btn">Subscribe</button>
 					</form>
