@@ -10,6 +10,7 @@ import {
 import {
 	getAuth,
 	onAuthStateChanged,
+	signOut,
 } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
 
 const firebaseConfig = {
@@ -42,6 +43,10 @@ onAuthStateChanged(auth, async (user) => {
 		const queryEmail = query(colRef, where("email", "==", email));
 		console.log("email", email);
 		const querySnapshot = await getDocs(queryEmail);
+		if (querySnapshot.empty) {
+			alert("Please Register First.");
+			window.location.href = "../";
+		}
 		querySnapshot.forEach((doc) => {
 			console.log(doc);
 			// doc.data() is never undefined for query doc snapshots
@@ -54,9 +59,23 @@ onAuthStateChanged(auth, async (user) => {
 	} else {
 		console.log("User not found error");
 		alert("Please Login to Continue");
+		window.location.href = "../../";
 		// User is signed out
 		// window.location.href = "/";
 	}
+});
+
+// Signout on clicking logout
+document.querySelector("#logOut").addEventListener("click", async () => {
+	console.log("logging out!");
+	await signOut(auth)
+		.then(() => {
+			console.log("Sign-out successful.");
+		})
+		.catch((error) => {
+			console.log("sorry bro, An error happened.", error);
+		});
+	window.location.href = "../../";
 });
 
 // function to be executed-------------------------------------------------
