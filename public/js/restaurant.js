@@ -5,7 +5,7 @@ import {
 	getDocs,
 	addDoc,
 	query,
-	where
+	where,
 } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
 import {
 	getAuth,
@@ -34,44 +34,43 @@ getDocs(colRef).then((snapshot) => {
 const auth = getAuth(firebaseApp);
 let email = "test@mail.com";
 
-onAuthStateChanged(auth, async(user) => {
-	console.log("🚀 ~ file: restaurant.js:35 ~ auth:", user)
+onAuthStateChanged(auth, async (user) => {
+	console.log("🚀 ~ file: restaurant.js:35 ~ auth:", user);
 	if (user) {
 		// User is signed in, see docs for a list of available properties
 		email = user.email;
-		console.log(email);
+
 		// to redirect into dashboard if registered
-		const isRegistered = query(colRef, where("email", "==", email));
+		const queryEmail = query(colRef, where("email", "==", email));
 		console.log(email);
-		const querySnapshot = await getDocs(isRegistered);
-		// console.log(querySnapshot.data().count);
-		console.log(querySnapshot.empty);
-		console.log(Array.from(querySnapshot));
-		querySnapshot.forEach((doc) => {
-			// doc.data() is never undefined for query doc snapshots
-			console.log(doc.id, " => ", doc.data());
-		});
+		const querySnapshot = await getDocs(queryEmail);
 		if (!querySnapshot.empty) {
-			document.querySelector("#register-restaurant").style.display = "none";
-			const dashboardButton = document.querySelector("#restaurant-login-link");
-			dashboardButton.textContent = "GO TO DASHBOARD";
-			dashboardButton.href = "dashboard/";
-			document.querySelector(".accordion-container").style.margin = "0";
+			hideRegisterAndChangeButtonNameAndLocation(
+				"GO TO DASHBOARD",
+				"dashboard/"
+			);
 		}
 	} else {
 		console.log("User not found error");
+		hideRegisterAndChangeButtonNameAndLocation("LOGIN", "../");
+		alert("Please Login to Continue");
 		// User is signed out
-		// alert("Please Login/Sign Up first!");
 		// window.location.href = "/";
 	}
 });
 
-
 // Add data to firestore from register form ---------------------------------------------------
 const addcustomerform = document.querySelector("#register-form");
-addcustomerform.addEventListener("submit", (e) => {
+addcustomerform.addEventListener("submit", async (e) => {
 	e.preventDefault();
 	console.log(email);
+	const queryEmail = query(colRef, where("email", "==", email));
+	const querySnapshot = await getDocs(queryEmail);
+	if (!querySnapshot.empty) {
+		alert("Already Registered!");
+		return;
+	}
+
 	addDoc(colRef, {
 		Name: addcustomerform.Name.value,
 		AadhaarNumber: addcustomerform.AadhaarNumber.value,
@@ -82,7 +81,17 @@ addcustomerform.addEventListener("submit", (e) => {
 		email: email,
 		phnumber: addcustomerform.phnumber.value,
 		Restaurantname: addcustomerform.restaurantname.value,
+		dateOfRegistration: new Date(),
+		timeFromUTC: Date.now()
 	});
+	alert("Registered Successfully!")
+
 });
 
-
+function hideRegisterAndChangeButtonNameAndLocation(buttonName, location) {
+	document.querySelector("#register-restaurant").style.display = "none";
+	const dashboardButton = document.querySelector("#restaurant-login-link");
+	dashboardButton.textContent = buttonName;
+	dashboardButton.href = location;
+	document.querySelector(".accordion-container").style.margin = "0";
+}

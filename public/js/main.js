@@ -54,6 +54,7 @@ async function signUpWithEmail() {
 			const errorMessage = error.message;
 			console.log(errorCode);
 			console.log(errorMessage);
+			alert(errorMessage);
 		});
 }
 
@@ -85,6 +86,7 @@ async function loginWithEmail() {
 			const errorMessage = error.message;
 			console.log(errorCode);
 			console.log(errorMessage);
+			alert(errorMessage);
 		});
 }
 
