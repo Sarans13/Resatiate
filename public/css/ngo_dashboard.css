@@ -16,18 +16,23 @@ body
 
 .logo
 {
-  text-align: left;
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: 'Alegreya Sans SC', sans-serif;
-  letter-spacing: 0.05em;
-  padding-inline-start: 0.5em;
-  padding-block-start: 0.5em;
+	text-align: left;
+	font-size: 2rem;
+	font-weight: bold;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	letter-spacing: 0.05em;
+	padding-inline-start: 0.5em;
+	padding-block-start: 0.5em;
+}
+
+.logo:hover
+{
+	opacity: 0.8;
 }
 
 .logo span
 {
-  color: var(--primary-color);
+	color: var(--primary-color);
 }
 
 
@@ -283,8 +288,13 @@ body
 	bottom: -8px;
 	padding: 10px 14px;
 	background: var(--deba-green);
-	transition: all 0.5s ease;
+	transition: background var(--transition-time) var(--transition-curve);
 	overflow: hidden;
+	cursor: pointer;
+}
+.sidebar li.profile:hover
+{
+	background: var(--primary-green);
 }
 
 .sidebar.open li.profile

@@ -4,11 +4,13 @@ import {
 	collection,
 	getDocs,
 	addDoc,
-    query, 
-	where} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
+	query,
+	where,
+} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
 import {
 	getAuth,
 	onAuthStateChanged,
+	signOut,
 } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
 
 const firebaseConfig = {
@@ -41,28 +43,43 @@ onAuthStateChanged(auth, async (user) => {
 		const queryEmail = query(colRef, where("email", "==", email));
 		console.log(email);
 		const querySnapshot = await getDocs(queryEmail);
+		if (querySnapshot.empty) {
+			alert("Please Register First.");
+			window.location.href = "../";
+		}
 		querySnapshot.forEach((doc) => {
 			console.log(doc);
 			// doc.data() is never undefined for query doc snapshots
 			console.log(doc.id, " => ", doc.data());
-			const {
-				Name, Industryname
-			} = doc.data();
+			const { Name, Industryname } = doc.data();
 			console.log(Name);
 			console.log(Industryname);
-			changingContent(Name,Industryname);
-		  });
-		
+			changingContent(Name, Industryname);
+		});
 	} else {
 		console.log("User not found error");
 		alert("Please Login to Continue");
+		window.location.href = "../../";
 		// User is signed out
 		// window.location.href = "/";
 	}
 });
 
+// Signout on clicking logout
+document.querySelector("#logOut").addEventListener("click", async () => {
+	console.log("logging out!");
+	await signOut(auth)
+		.then(() => {
+			console.log("Sign-out successful.");
+		})
+		.catch((error) => {
+			console.log("sorry bro, An error happened.", error);
+		});
+	window.location.href = "../../";
+});
+
 // function to be executed-------------------------------------------------
-function changingContent(Name,Industryname){
+function changingContent(Name, Industryname) {
 	const username = document.querySelector("#Sarans");
 	username.textContent = Name;
 	const Indusname = document.querySelector("#Kalinga");
