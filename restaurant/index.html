@@ -72,26 +72,27 @@
 			<form action="" id="register-form">
 				<div class="inputs">
 					<div class="input-1">
-						<input type="text" placeholder="Name" name="Name">
-						<input type="number" placeholder="Aadhaar Number" name="AadhaarNumber">
+						<input required type="text" placeholder="Name" name="Name">
+						<input required type="text" placeholder="Aadhaar Number" name="AadhaarNumber" type="text"
+							inputmode="numeric" pattern="[0-9]{0,12}" maxlength="12" minlength="12">
 					</div>
 					<div class="input-1">
 						<input type="number" placeholder="License Number(optional)" name="LicenseNumber">
-						<input type="text" placeholder="Country" name="Country">
+						<input required type="text" placeholder="Country" name="Country">
 					</div>
 					<div class="input-1">
-						<input type="text" placeholder="City" name="City">
-						<input type="text" placeholder="Address" name="Address">
+						<input required type="text" placeholder="City" name="City">
+						<input required type="text" placeholder="Address" name="Address">
 					</div>
 					<div class="input-1">
-						<input type="text" placeholder="Restaurant Name" name="restaurantname">
-						<input type="number" placeholder="Phone Number" name="phnumber">
+						<input required type="text" placeholder="Restaurant Name" name="restaurantname">
+						<input required type="tel" placeholder="Phone Number" name="phnumber">
 					</div>
 				</div>
 				<br><br>
 				<div class="remember-me--forget-password">
 					<label>
-						<input type="checkbox" name="item" class="check-box-input" checked />
+						<input type="checkbox" name="item" class="check-box-input" checked required/>
 						<span class="text-checkbox">I hereby agree to all the terms and conditions that any fault in
 							delivery to
 							both

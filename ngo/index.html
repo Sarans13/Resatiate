@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="/css/footer.css" />
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<script type="module" src="/js/ngo.js" defer></script>
-	
+
 	<title>NGO</title>
 </head>
 
@@ -29,7 +29,8 @@
 			<div class="hero_text">
 				Your <span>Support</span> Brings Food to Those in Need
 			</div>
-			<button class="restaurant-login-button"><a href="#register-restaurant" id="restaurant-login-link">REGISTER</a></button>
+			<button class="restaurant-login-button"><a href="#register-restaurant"
+					id="restaurant-login-link">REGISTER</a></button>
 		</div>
 	</section>
 	<section id="form">
@@ -68,27 +69,29 @@
 			<form action="" id="register-form">
 				<div class="inputs">
 					<div class="input-1">
-						<input type="text" placeholder="Name" name="Name">
-						<input type="number" placeholder="Aadhaar Number" name="AadhaarNumber">
+						<input required type="text" placeholder="Name" name="Name">
+						<input required type="text" placeholder="Aadhaar Number" name="AadhaarNumber" type="text"
+							inputmode="numeric" pattern="[0-9]{0,12}">
 					</div>
 					<div class="input-1">
 						<input type="number" placeholder="License Number(optional)" name="LicenseNumber">
-						<input type="text" placeholder=" Country" name="Country">
+						<input required type="text" placeholder=" Country" name="Country">
 					</div>
 					<div class="input-1">
-						<input type="text" placeholder="City" name="City">
-						<input type="text" placeholder="Address" name="Address">
+						<input required type="text" placeholder="City" name="City">
+						<input required type="text" placeholder="Address" name="Address">
 					</div>
 					<div class="input-1">
-						<input type="text" placeholder="NGO Name" name="NGOname">
-						<input type="text" placeholder="Phone Number" name="phnumber">
+						<input required type="text" placeholder="NGO Name" name="NGOname">
+						<input required type="tel" placeholder="Phone Number" name="phnumber">
 					</div>
 				</div>
 				<br><br>
 				<div class="remember-me--forget-password">
 					<label>
-						<input type="checkbox" name="item" class="check-box-input" checked />
-						<span class="text-checkbox">I hereby agree to all the terms and conditions that for any delay in the notification from the restaurant, the portal will not be responsible for it.</span>
+						<input type="checkbox" name="item" class="check-box-input" checked required />
+						<span class="text-checkbox">I hereby agree to all the terms and conditions that for any delay in
+							the notification from the restaurant, the portal will not be responsible for it.</span>
 						<br>
 						<a href="#">Already registered? Go to login page.</a>
 					</label>
@@ -114,24 +117,28 @@
 						</button>
 						<div class="accordion-content">
 							<p>
-								Restaurants work on subscription model.They get notification every mid-night around 9pm to check food availability. Once they respond you will be notified near your location to pick up and deliver to the one in need.
+								Restaurants work on subscription model.They get notification every mid-night around 9pm
+								to check food availability. Once they respond you will be notified near your location to
+								pick up and deliver to the one in need.
 							</p>
 						</div>
 					</div>
 					<div class="accordion-item">
 						<button id="accordion-button-2" aria-expanded="false">
-							<span class="accordion-title"><span>Why us?</span><span class="icon" aria-hidden="true"></span>
+							<span class="accordion-title"><span>Why us?</span><span class="icon"
+									aria-hidden="true"></span>
 						</button>
 						<div class="accordion-content">
 							<p>
-								Because we not only limit your reach to one restaurant but to many, so that food wastage is minimal.
+								Because we not only limit your reach to one restaurant but to many, so that food wastage
+								is minimal.
 							</p>
 						</div>
 					</div>
 					<div class="accordion-item">
 						<button id="accordion-button-3" aria-expanded="false">
-							<span class="accordion-title">What if the food is bad?</span><span
-								class="icon" aria-hidden="true"></span>
+							<span class="accordion-title">What if the food is bad?</span><span class="icon"
+								aria-hidden="true"></span>
 						</button>
 						<div class="accordion-content">
 							<p>
