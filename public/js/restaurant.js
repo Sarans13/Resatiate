@@ -35,6 +35,7 @@ const auth = getAuth(firebaseApp);
 let email = "test@mail.com";
 
 onAuthStateChanged(auth, (user) => {
+	console.log("🚀 ~ file: restaurant.js:35 ~ auth:", user)
 	if (user) {
 		// User is signed in, see docs for a list of available properties
 		email = user.email;
@@ -46,6 +47,7 @@ onAuthStateChanged(auth, (user) => {
 		// window.location.href = "/";
 	}
 });
+
 
 // Add data to firestore from register form ---------------------------------------------------
 const addcustomerform = document.querySelector("#register-form");

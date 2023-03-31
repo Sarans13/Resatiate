@@ -33,9 +33,16 @@ const googleProvider = new GoogleAuthProvider();
 // });
 
 async function signUpWithEmail() {
+	signOut(auth)
+		.then(() => {
+			console.log("Sign-out successful.");
+		})
+		.catch((error) => {
+			console.log("sorry bro, An error happened.", error);
+		});
 	let email = document.getElementById("signup-email").value;
 	let password = document.getElementById("signup-password").value;
-	createUserWithEmailAndPassword(auth, email, password)
+	await createUserWithEmailAndPassword(auth, email, password)
 		.then((userCredential) => {
 			// Signed in
 			const user = userCredential.user;
@@ -57,9 +64,16 @@ async function signUpWithEmail() {
 // });
 
 async function loginWithEmail() {
+	signOut(auth)
+		.then(() => {
+			console.log("Sign-out successful.");
+		})
+		.catch((error) => {
+			console.log("sorry bro, An error happened.", error);
+		});
 	let email = document.getElementById("login-email").value;
 	let password = document.getElementById("login-password").value;
-	signInWithEmailAndPassword(auth, email, password)
+	await signInWithEmailAndPassword(auth, email, password)
 		.then((userCredential) => {
 			// Signed in
 			const user = userCredential.user;
@@ -81,6 +95,13 @@ const googleGmailLogins = document.querySelectorAll(
 
 Array.from(googleGmailLogins).forEach((googleGmailLogin) => {
 	googleGmailLogin.addEventListener("click", () => {
+		signOut(auth)
+			.then(() => {
+				console.log("Sign-out successful.");
+			})
+			.catch((error) => {
+				console.log("sorry bro, An error happened.", error);
+			});
 		signInWithPopup(auth, googleProvider)
 			.then((result) => {
 				// This gives you a Google Access Token. You can use it to access the Google API.
@@ -118,13 +139,13 @@ Array.from(loginButtons).forEach((loginButton, index) => {
 			form.action = `${allOrganisationList[index]}/`;
 			form.onsubmit = async () => {
 				console.log("inside onsubmit");
-				signOut(auth)
-					.then(() => {
-						console.log("Sign-out successful.");
-					})
-					.catch((error) => {
-						console.log("sorry bro, An error happened.", error);
-					});
+				// signOut(auth)
+				// 	.then(() => {
+				// 		console.log("Sign-out successful.");
+				// 	})
+				// 	.catch((error) => {
+				// 		console.log("sorry bro, An error happened.", error);
+				// 	});
 				if (form.id == "signInForm") {
 					console.log("Signed In");
 					await loginWithEmail();
@@ -132,7 +153,7 @@ Array.from(loginButtons).forEach((loginButton, index) => {
 					console.log("Signed Up");
 					await signUpWithEmail();
 				}
-				await onAuthStateChanged(auth, function (user) {
+				onAuthStateChanged(auth, function (user) {
 					if (user) {
 						window.location.href = form.action;
 						console.log("User Email: ", user.email);
