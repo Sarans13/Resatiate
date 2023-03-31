@@ -23,27 +23,27 @@ Development Goals, including:
 
 ### Clone this repository
 
-```bash
+```console
 git clone https://github.com/iamkcube/Resatiate.git
 ```
 
 ### Change directory to Resatiate
 
-```bash
+```console
 cd Resatiate
 ```
 
 ### Install dev dependencies
-``` bash
+``` console
 npm install
 ```
 
 ### Spin up the dev server
-``` bash
+``` console
 npm run dev
 ```
 ### Follow the link given in terminal
-```bash
+```console
 > resatiate@0.0.0 dev
 > vite --host
 
