@@ -29,7 +29,7 @@
 			<div class="hero_text">
 				Your <span>Support</span> Brings Food to Those in Need
 			</div>
-			<button class="restaurant-login-button"><a href="#Register">REGISTER</a></button>
+			<button class="restaurant-login-button"><a href="#register-restaurant" id="restaurant-login-link">REGISTER</a></button>
 		</div>
 	</section>
 	<section id="form">
@@ -58,44 +58,50 @@
 	</section>
 
 
-	<div class="box-form" id="Register" data-aos="zoom-in-up" data-aos-offset="300">
+	<div class="box-form" id="register-restaurant" data-aos="zoom-in-up" data-aos-offset="300">
 		<div class="left">
 			<div class="overlay">
 			</div>
 		</div>
 		<div class="right">
 			<h5>REGISTER</h5>
-			<div class="inputs">
-				<div class="input-1">
-					<input type="text" placeholder="Name">
-					<input type="number" placeholder="Aadhaar Number">
+			<form action="" id="register-form">
+				<div class="inputs">
+					<div class="input-1">
+						<input type="text" placeholder="Name" name="Name">
+						<input type="number" placeholder="Aadhaar Number" name="AadhaarNumber">
+					</div>
+					<div class="input-1">
+						<input type="number" placeholder="License Number(optional)" name="LicenseNumber">
+						<input type="text" placeholder=" Country" name="Country">
+					</div>
+					<div class="input-1">
+						<input type="text" placeholder="City" name="City">
+						<input type="text" placeholder="Address" name="Address">
+					</div>
+					<div class="input-1">
+						<input type="text" placeholder="NGO Name" name="NGOname">
+						<input type="text" placeholder="Phone Number" name="phnumber">
+					</div>
 				</div>
-				<div class="input-1">
-					<input type="number" placeholder="License Number(optional)">
-					<input type="text" placeholder=" Country">
+				<br><br>
+				<div class="remember-me--forget-password">
+					<label>
+						<input type="checkbox" name="item" class="check-box-input" checked />
+						<span class="text-checkbox">I hereby agree to all the terms and conditions that any fault in
+							delivery to both
+							industry and the NGO that is food or oil will subject to open complaint against the entire
+							organization
+							(restaurant/catering) service openly in the ONLINE LEGAL INDIA or FSSAI portal which may subject
+							to license
+							cancellation.</span>
+						<br>
+						<a href="#">Already registered? Go to login page.</a>
+					</label>
 				</div>
-				<div class="input-1">
-					<input type="text" placeholder="City">
-					<input type="text" placeholder="Address">
-				</div>
-			</div>
-			<br><br>
-			<div class="remember-me--forget-password">
-				<label>
-					<input type="checkbox" name="item" class="check-box-input" checked />
-					<span class="text-checkbox">I hereby agree to all the terms and conditions that any fault in
-						delivery to both
-						industry and the NGO that is food or oil will subject to open complaint against the entire
-						organization
-						(restaurant/catering) service openly in the ONLINE LEGAL INDIA or FSSAI portal which may subject
-						to license
-						cancellation.</span>
-					<br>
-					<a href="#">Already registered? Go to login page.</a>
-				</label>
-			</div>
-			<br>
-			<button>Register</button>
+				<br>
+				<button>Register</button>
+			</form>
 		</div>
 	</div>
 

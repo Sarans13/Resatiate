@@ -71,7 +71,7 @@ addcustomerform.addEventListener("submit", async (e) => {
 		return;
 	}
 
-	addDoc(colRef, {
+	await addDoc(colRef, {
 		Name: addcustomerform.Name.value,
 		AadhaarNumber: addcustomerform.AadhaarNumber.value,
 		LicenseNumber: addcustomerform.LicenseNumber.value,
@@ -82,10 +82,10 @@ addcustomerform.addEventListener("submit", async (e) => {
 		phnumber: addcustomerform.phnumber.value,
 		Restaurantname: addcustomerform.restaurantname.value,
 		dateOfRegistration: new Date(),
-		timeFromUTC: Date.now()
+		timeFromUTC: Date.now(),
 	});
-	alert("Registered Successfully!")
-
+	alert("Registered Successfully!");
+	window.location.href = "dashboard/";
 });
 
 function hideRegisterAndChangeButtonNameAndLocation(buttonName, location) {
